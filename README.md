@@ -1,4 +1,3 @@
-````md
 # AI-Powered Fitness Tracker (React + Strapi + Gemini AI)
 
 A real-world **AI-powered fitness tracking application** built using **React JS**, **Strapi**, and **Tailwind CSS**.

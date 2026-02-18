@@ -1,17 +1,16 @@
-````md
 # 🏋️ FitTrack – Fitness Tracker (Full Stack)
 
 FitTrack is a full-stack fitness tracking web app where users can log daily food intake and activities, track calories, manage their profile, and use an AI-powered feature to estimate food calories from an image.
 
-- **Frontend:** Deployed on **Netlify**
-- **Backend (Strapi):** Deployed on **Render**
+* **Frontend:** Deployed on **Netlify**
+* **Backend (Strapi):** Deployed on **Render**
 
 ---
 
 ## 🚀 Live Demo
 
-- **Frontend (Netlify):** https://your-frontend-url.netlify.app
-- **Backend (Render / Strapi API):** https://your-backend-url.onrender.com
+* **Frontend (Netlify):** https://fitness-tracker-0vm7.onrender.com
+* **Backend (Render / Strapi API):** https://6994e0c2973889b344bdab00--fitness-tracker-bs.netlify.app
 
 ---
 
@@ -19,36 +18,36 @@ FitTrack is a full-stack fitness tracking web app where users can log daily food
 
 ### 🔐 Authentication
 
-- Signup + Login using Strapi Auth
-- JWT-based protected routes
-- Persistent login on refresh
+* Signup + Login using Strapi Auth
+* JWT-based protected routes
+* Persistent login on refresh
 
 ### 👤 User Profile
 
-- Update age, weight, height, goal
-- Member since indicator
-- Tracks onboarding completion
+* Update age, weight, height, goal
+* Member since indicator
+* Tracks onboarding completion
 
 ### 🍽 Food Log
 
-- Add food entries with calories + meal type
-- View today’s food grouped by meal type
-- Delete entries
-- Daily calorie total
+* Add food entries with calories + meal type
+* View today’s food grouped by meal type
+* Delete entries
+* Daily calorie total
 
 ### 🏃 Activity Log
 
-- Add activity entries with duration + calories
-- Quick add activities
-- View today’s activities grouped by type
-- Delete activities
-- Total active minutes today
+* Add activity entries with duration + calories
+* Quick add activities
+* View today’s activities grouped by type
+* Delete activities
+* Total active minutes today
 
 ### 🤖 AI Food Snap
 
-- Upload a food image
-- AI extracts food items + estimates calories
-- Auto-fills food form with suggested values
+* Upload a food image
+* AI extracts food items + estimates calories
+* Auto-fills food form with suggested values
 
 ---
 
@@ -56,38 +55,34 @@ FitTrack is a full-stack fitness tracking web app where users can log daily food
 
 ### Frontend
 
-- React + TypeScript
-- Tailwind CSS
-- Axios
-- React Router
-- React Hot Toast
-- Lucide Icons
+* React + TypeScript
+* Tailwind CSS
+* Axios
+* React Router
+* React Hot Toast
+* Lucide Icons
 
 ### Backend
 
-- Strapi (Headless CMS)
-- JWT Auth (users-permissions)
-- Custom Controllers (per-user data filtering)
-- Render Deployment
+* Strapi (Headless CMS)
+* JWT Auth (users-permissions)
+* Custom Controllers (per-user data filtering)
+* Render Deployment
 
 ### AI
 
-- Gemini API (image-to-food calorie estimation)
+* Gemini API (image-to-food calorie estimation)
 
 ---
 
 ## 📦 Environment Variables
 
-### Frontend (`.env`)
+### Frontend (.env)
 
-```env
-VITE_BACKEND_URL=https://your-backend-url.onrender.com
-```
-````
+VITE_BACKEND_URL=[https://your-backend-url.onrender.com](https://your-backend-url.onrender.com)
 
-### Backend (`.env`)
+### Backend (.env)
 
-```env
 HOST=0.0.0.0
 PORT=1337
 APP_KEYS=your_app_keys
@@ -96,9 +91,8 @@ ADMIN_JWT_SECRET=your_admin_secret
 JWT_SECRET=your_jwt_secret
 
 GEMINI_API_KEY=your_gemini_api_key
-```
 
-> A `.env.example` file is included in the repo.
+> A **.env.example** file is included in the repo.
 
 ---
 
@@ -106,27 +100,27 @@ GEMINI_API_KEY=your_gemini_api_key
 
 ### Auth (Strapi default)
 
-- `POST /api/auth/local`
-- `POST /api/auth/local/register`
-- `GET /api/users/me`
+* POST /api/auth/local
+* POST /api/auth/local/register
+* GET /api/users/me
 
 ### Food Logs
 
-- `GET /api/food-logs`
-- `POST /api/food-logs`
-- `GET /api/food-logs/:id`
-- `DELETE /api/food-logs/:id`
+* GET /api/food-logs
+* POST /api/food-logs
+* GET /api/food-logs/:id
+* DELETE /api/food-logs/:id
 
 ### Activity Logs
 
-- `GET /api/activity-logs`
-- `POST /api/activity-logs`
-- `GET /api/activity-logs/:id`
-- `DELETE /api/activity-logs/:id`
+* GET /api/activity-logs
+* POST /api/activity-logs
+* GET /api/activity-logs/:id
+* DELETE /api/activity-logs/:id
 
 ### AI Image Analysis
 
-- `POST /api/image-analysis`
+* POST /api/image-analysis
 
 ---
 
@@ -134,59 +128,40 @@ GEMINI_API_KEY=your_gemini_api_key
 
 ### 1) Clone repo
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
-```
 
 ### 2) Frontend Setup
 
-```bash
 cd client
 npm install
 npm run dev
-```
 
 Frontend runs on:
-
-```
-http://localhost:5173
-```
+[http://localhost:5173](http://localhost:5173)
 
 ### 3) Backend Setup (Strapi)
 
-```bash
 cd server
 npm install
 npm run develop
-```
 
 Backend runs on:
-
-```
-http://localhost:1337
-```
+[http://localhost:1337](http://localhost:1337)
 
 Strapi Admin:
-
-```
-http://localhost:1337/admin
-```
+[http://localhost:1337/admin](http://localhost:1337/admin)
 
 ---
 
 ## 🔒 Notes About Security
 
-- Food logs and activity logs are **user-specific**
-- Controllers ensure users can only access their own entries
-- Protected routes require JWT token
+* Food logs and activity logs are user-specific
+* Controllers ensure users can only access their own entries
+* Protected routes require JWT token
 
 ---
 
 ## 👨‍💻 Author
 
 Built by **Baibhav Sinha**
-
-```
-
-```

@@ -9,8 +9,8 @@ FitTrack is a full-stack fitness tracking web app where users can log daily food
 
 ## 🚀 Live Demo
 
-- Frontend (Netlify): [https://6994e0c2973889b344bdab00--fitness-tracker-bs.netlify.app](https://6994e0c2973889b344bdab00--fitness-tracker-bs.netlify.app)
-- Backend (Render / Strapi API): [https://fitness-tracker-0vm7.onrender.com](https://fitness-tracker-0vm7.onrender.com)
+- Frontend (Netlify): [See Live Demo of Frontend](https://6994e0c2973889b344bdab00--fitness-tracker-bs.netlify.app)
+- Backend (Render / Strapi API): [API of this project](https://fitness-tracker-0vm7.onrender.com)
 
 ---
 

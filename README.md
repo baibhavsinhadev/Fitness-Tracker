@@ -1,79 +1,145 @@
-# AI-Powered Fitness Tracker (React + Strapi + Gemini AI)
+````md
+# 🏋️ FitTrack – Fitness Tracker (Full Stack)
 
-A real-world **AI-powered fitness tracking application** built using **React JS**, **Strapi**, and **Tailwind CSS**.
+FitTrack is a full-stack fitness tracking web app where users can log daily food intake and activities, track calories, manage their profile, and use an AI-powered feature to estimate food calories from an image.
 
-This project helps users set fitness goals, track daily calories, log workouts, and even analyze food images using **Google Gemini AI** to automatically estimate calorie intake.
-
-A perfect full stack AI portfolio project for developers who want to build something modern and real.
+- **Frontend:** Deployed on **Netlify**
+- **Backend (Strapi):** Deployed on **Render**
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
 
-### 🧑‍💻 User & Profile
+- **Frontend (Netlify):** https://your-frontend-url.netlify.app
+- **Backend (Render / Strapi API):** https://your-backend-url.onrender.com
 
-- User authentication (**Sign up / Sign in**)
-- Update user profile details
-- Personalized fitness goal system
+---
 
-### 🎯 Fitness Tracking
+## ✨ Features
 
-- Set daily fitness goals
-- Track daily food intake (**calories consumed**)
-- Track fitness activities (**calories burned**)
-- View progress summary
+### 🔐 Authentication
 
-### 🤖 AI Food Tracking (Gemini AI)
+- Signup + Login using Strapi Auth
+- JWT-based protected routes
+- Persistent login on refresh
+
+### 👤 User Profile
+
+- Update age, weight, height, goal
+- Member since indicator
+- Tracks onboarding completion
+
+### 🍽 Food Log
+
+- Add food entries with calories + meal type
+- View today’s food grouped by meal type
+- Delete entries
+- Daily calorie total
+
+### 🏃 Activity Log
+
+- Add activity entries with duration + calories
+- Quick add activities
+- View today’s activities grouped by type
+- Delete activities
+- Total active minutes today
+
+### 🤖 AI Food Snap
 
 - Upload a food image
-- Food image analysis using **Google Gemini AI**
-- Automatically calculates estimated calorie intake
-- Saves food entry into the tracker
-
-### 🌍 Deployment
-
-- Free deployment for both frontend and backend:
-  - **Frontend**: Vercel
-  - **Backend**: Strapi Cloud
+- AI extracts food items + estimates calories
+- Auto-fills food form with suggested values
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-| Technology       | Usage               |
-| ---------------- | ------------------- |
-| React JS         | Frontend            |
-| Tailwind CSS     | UI Styling          |
-| Strapi           | Backend + CMS + API |
-| Google Gemini AI | Food image analysis |
-| Vercel           | Frontend Deployment |
-| Strapi Cloud     | Backend Deployment  |
+### Frontend
+
+- React + TypeScript
+- Tailwind CSS
+- Axios
+- React Router
+- React Hot Toast
+- Lucide Icons
+
+### Backend
+
+- Strapi (Headless CMS)
+- JWT Auth (users-permissions)
+- Custom Controllers (per-user data filtering)
+- Render Deployment
+
+### AI
+
+- Gemini API (image-to-food calorie estimation)
 
 ---
 
-## 📂 Project Structure
+## 📦 Environment Variables
 
+### Frontend (`.env`)
+
+```env
+VITE_BACKEND_URL=https://your-backend-url.onrender.com
 ```
-fitness-tracker/
-│
-├── client/        # React frontend
-└── server/        # Strapi backend
+````
+
+### Backend (`.env`)
+
+```env
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=your_app_keys
+API_TOKEN_SALT=your_token_salt
+ADMIN_JWT_SECRET=your_admin_secret
+JWT_SECRET=your_jwt_secret
+
+GEMINI_API_KEY=your_gemini_api_key
 ```
+
+> A `.env.example` file is included in the repo.
 
 ---
 
-## ⚙️ Setup Instructions (Local Development)
+## 🔗 API Routes (Backend)
 
-### 1️⃣ Clone the Repository
+### Auth (Strapi default)
+
+- `POST /api/auth/local`
+- `POST /api/auth/local/register`
+- `GET /api/users/me`
+
+### Food Logs
+
+- `GET /api/food-logs`
+- `POST /api/food-logs`
+- `GET /api/food-logs/:id`
+- `DELETE /api/food-logs/:id`
+
+### Activity Logs
+
+- `GET /api/activity-logs`
+- `POST /api/activity-logs`
+- `GET /api/activity-logs/:id`
+- `DELETE /api/activity-logs/:id`
+
+### AI Image Analysis
+
+- `POST /api/image-analysis`
+
+---
+
+## 🧪 Local Setup
+
+### 1) Clone repo
 
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
 
----
-
-## 🔥 Frontend Setup (React)
+### 2) Frontend Setup
 
 ```bash
 cd client
@@ -81,15 +147,13 @@ npm install
 npm run dev
 ```
 
-Frontend will run on:
+Frontend runs on:
 
 ```
 http://localhost:5173
 ```
 
----
-
-## 🧠 Backend Setup (Strapi)
+### 3) Backend Setup (Strapi)
 
 ```bash
 cd server
@@ -97,7 +161,13 @@ npm install
 npm run develop
 ```
 
-Strapi Admin Panel will run on:
+Backend runs on:
+
+```
+http://localhost:1337
+```
+
+Strapi Admin:
 
 ```
 http://localhost:1337/admin
@@ -105,92 +175,18 @@ http://localhost:1337/admin
 
 ---
 
-## 🔑 Environment Variables
+## 🔒 Notes About Security
 
-### 📌 Frontend `.env`
-
-Create a `.env` file inside the `client/` folder:
-
-```env
-VITE_API_URL=http://localhost:1337
-VITE_GEMINI_API_KEY=your_google_gemini_api_key
-```
-
----
-
-### 📌 Backend `.env`
-
-Create a `.env` file inside the `server/` folder:
-
-```env
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=your_app_keys
-API_TOKEN_SALT=your_api_token_salt
-ADMIN_JWT_SECRET=your_admin_jwt_secret
-JWT_SECRET=your_jwt_secret
-```
-
-> Strapi generates most secrets automatically when you create the project.
-> If not, you can generate them manually.
-
----
-
-## 🤖 Google Gemini AI Setup
-
-1. Go to **Google AI Studio**
-2. Create a Gemini API key
-3. Paste the key inside:
-
-```env
-VITE_GEMINI_API_KEY=your_key_here
-```
-
----
-
-## 🌍 Deployment
-
-### Frontend (Vercel)
-
-1. Push your code to GitHub
-2. Import repository in Vercel
-3. Add environment variables in Vercel:
-   - `VITE_API_URL`
-   - `VITE_GEMINI_API_KEY`
-
-4. Deploy 🎉
-
----
-
-### Backend (Strapi Cloud)
-
-1. Push backend to GitHub
-2. Deploy using Strapi Cloud
-3. Add required `.env` variables inside Strapi Cloud settings
-4. Deploy 🎉
-
----
-
-## 📌 Future Improvements
-
-- Meal macros tracking (Protein / Carbs / Fats)
-- Weekly + Monthly analytics charts
-- AI-based meal suggestions
-- Workout plan generator
-- Dark mode UI
+- Food logs and activity logs are **user-specific**
+- Controllers ensure users can only access their own entries
+- Protected routes require JWT token
 
 ---
 
 ## 👨‍💻 Author
 
-**Baibhav Sinha**
-16 y/o! Full Stack Web Developer
+Built by **Baibhav Sinha**
 
-If you liked this project, consider giving it a ⭐ on GitHub.
+```
 
----
-
-## 📜 License
-
-This project is created for portfolio purposes.  
-You may view the code, but copying or reusing it without permission is not allowed.
+```

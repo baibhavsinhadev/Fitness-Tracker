@@ -118,13 +118,13 @@ VITE_BACKEND_URL=[https://your-backend-url.onrender.com](https://your-backend-ur
 
 ### Backend (.env)
 
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=your_app_keys
-API_TOKEN_SALT=your_token_salt
-ADMIN_JWT_SECRET=your_admin_secret
-JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_gemini_api_key
+- HOST=0.0.0.0
+- PORT=1337
+- APP_KEYS=your_app_keys
+- API_TOKEN_SALT=your_token_salt
+- ADMIN_JWT_SECRET=your_admin_secret
+- JWT_SECRET=your_jwt_secret
+- GEMINI_API_KEY=your_gemini_api_key
 
 A .env.example file is included in the repo.
 

@@ -1,4 +1,4 @@
-# 🏋️ FitTrack – Fitness Tracker (Full Stack)
+# 🏋️ FitTrack – AI-Powered Full-Stack Fitness Tracking SaaS
 
 FitTrack is a full-stack fitness tracking web app where users can log daily food intake and activities, track calories, manage their profile, and use an AI-powered feature to estimate food calories from an image.
 
@@ -71,6 +71,14 @@ FitTrack is a full-stack fitness tracking web app where users can log daily food
 
 ---
 
+## 📈 Impact & Performance
+
+- Fully functional SaaS-style app with secure authentication
+- Handles user-specific data isolation using custom Strapi controllers
+- Optimized API calls with efficient filtering
+- AI-powered calorie estimation using Gemini Vision API
+- Production deployed on Netlify + Render
+
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -94,6 +102,13 @@ FitTrack is a full-stack fitness tracking web app where users can log daily food
 - Gemini API (image-to-food calorie estimation)
 
 ---
+
+## 🚧 Challenges & Learnings
+
+- Handling JWT token persistence securely
+- Implementing per-user data filtering in Strapi
+- Managing CORS between Netlify & Render
+- Handling image upload and AI API latency
 
 ## 📦 Environment Variables
 
@@ -173,6 +188,14 @@ Strapi Admin:
 
 ---
 
+## 🔮 Future Improvements
+
+- Add calorie goal progress charts
+- Add role-based admin dashboard
+- Add unit tests
+- Implement rate limiting
+- Add subscription-based premium features
+
 ## 🔒 Notes About Security
 
 - Food logs and activity logs are user-specific
@@ -184,3 +207,4 @@ Strapi Admin:
 ## 👨‍💻 Author
 
 Built by Baibhav Sinha
+16 y/o Full Stack Developer | MERN | NextJS | AI Integration
